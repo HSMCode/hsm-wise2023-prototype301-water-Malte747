@@ -11,6 +11,11 @@ public class Score : MonoBehaviour
     public TMP_Text coinText;
     public int currentCoins;
 
+
+    public GameObject gameOverScreen;
+    public GameObject buttonRestart;
+
+
     void Awake()
     {
         instance = this;
@@ -22,10 +27,10 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        if(currentCoins >= 100)
-        {
-        SceneManager.LoadScene(1);
-        }
+         if(currentCoins >= 100)
+         {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+         }
     }
 
 
@@ -34,6 +39,20 @@ public class Score : MonoBehaviour
     {
         currentCoins += v;
         coinText.text = "Score: " + currentCoins.ToString() + "/100";
+    }
+
+
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+
+    public void gameOver()
+    {
+        gameOverScreen.SetActive(true);
     }
   
 }

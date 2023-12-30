@@ -11,10 +11,14 @@ public class Movement : MonoBehaviour
 
     public AudioSource audioPlayer;
 
+    public Score logic;
+
    void Start()
     {
        
         anim = GetComponent<Animator>();
+
+        logic = GameObject.FindGameObjectWithTag("logic").GetComponent<Score>();
     }
     void Update()
     {
@@ -50,6 +54,7 @@ public class Movement : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject); 
+            logic.gameOver();
         }
     }
 
