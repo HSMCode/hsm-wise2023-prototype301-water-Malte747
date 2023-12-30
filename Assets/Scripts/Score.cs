@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
     }
     void Start()
     {
-        coinText.text = "Score: " + currentCoins.ToString();
+        coinText.text = "Score: " + currentCoins.ToString() + "/100";
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class Score : MonoBehaviour
     public void IncreaseCoins(int v)
     {
         currentCoins += v;
-        coinText.text = "Score: " + currentCoins.ToString();
+        coinText.text = "Score: " + currentCoins.ToString() + "/100";
     }
   
 }

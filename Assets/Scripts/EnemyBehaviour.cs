@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public float speed = 5.0f; // Geschwindigkeit des NPC
+    public float speed = -5.0f; // Geschwindigkeit des NPC
 
 
 

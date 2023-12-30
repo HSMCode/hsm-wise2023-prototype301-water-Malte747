@@ -8,6 +8,9 @@ public class Movement : MonoBehaviour
     public float jumpDistance = 1.0f; // Die Distanz, um die sich der Charakter bewegen soll
     public Animator anim;
     public int value = 1;
+
+    public AudioSource audioPlayer;
+
    void Start()
     {
        
@@ -19,6 +22,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Bewegungsfunktion aufrufen, um den Charakter nach oben zu bewegen
+            audioPlayer.Play();
             MoveUp();
             Score.instance.IncreaseCoins(value);
             
