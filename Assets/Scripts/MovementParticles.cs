@@ -6,7 +6,7 @@ public class MovementParticles : MonoBehaviour
 {
     
     public float jumpDistance = 1.0f; // Die Distanz, um die sich der Charakter bewegen soll
-    public int value = 1;
+ 
 
 
    void Start()
@@ -21,11 +21,8 @@ public class MovementParticles : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Bewegungsfunktion aufrufen, um den Charakter nach oben zu bewegen
-           
             MoveUp();
            
-          
-            
         }
     }
 
