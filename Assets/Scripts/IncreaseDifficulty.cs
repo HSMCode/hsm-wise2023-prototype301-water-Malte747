@@ -5,6 +5,7 @@ public class IncreaseDifficulty : MonoBehaviour
 
     private float calculateDifficulty = 0f;
     public GameObject enemyPrefab;
+    //
 
     void Start()
     {
