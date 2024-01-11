@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          if (target != null) // Stelle sicher, dass das Ziel (target) vorhanden ist
+        if (target != null) // Stelle sicher, dass das Ziel (target) vorhanden ist
         {
             Vector3 newPos = new Vector3(
                 target.position.x + xoffset,

@@ -7,8 +7,6 @@ public class EnemyBehaviour : MonoBehaviour
     public float speed = -5.0f; // Geschwindigkeit des NPC
 
 
-
-
     void Update()
     {
         // Bewege den NPC nach links basierend auf der Geschwindigkeit

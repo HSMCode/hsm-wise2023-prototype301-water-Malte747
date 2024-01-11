@@ -14,6 +14,7 @@ public class Score : MonoBehaviour
 
     public GameObject gameOverScreen;
     public GameObject buttonRestart;
+    public GameObject winScreen;
 
 
     void Awake()
@@ -29,7 +30,8 @@ public class Score : MonoBehaviour
     {
          if(currentCoins >= 100)
          {
-         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            won();
+            FindObjectOfType<Movement>().ui = true;
          }
     }
 
@@ -53,6 +55,17 @@ public class Score : MonoBehaviour
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
+    }
+
+    public void won()
+    {
+        winScreen.SetActive(true);
+    }
+
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
   
 }
