@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public AudioSource audioPlayer;
 
     public Score logic;
+    public bool ui = false;
 
     public ParticleSystem bubbles;
 
@@ -26,13 +27,15 @@ public class Movement : MonoBehaviour
     void Update()
     {
         // Überprüfen, ob die Leertaste (Space-Taste) gedrückt wurde
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
         {
-            // Bewegungsfunktion aufrufen, um den Charakter nach oben zu bewegen
-            audioPlayer.Play();
-            MoveUp();
-            bubbles.Play();
-            Score.instance.IncreaseCoins(value);
+            if (ui != true){
+                // Bewegungsfunktion aufrufen, um den Charakter nach oben zu bewegen
+                audioPlayer.Play();
+                MoveUp();
+                bubbles.Play();
+                Score.instance.IncreaseCoins(value);
+            }
             
         }
     }
